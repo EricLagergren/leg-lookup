@@ -1,0 +1,2 @@
+/usr/share/terminator/terminatorlib/window.py:47: GtkWarning: Unable to locate theme engine in module_path: "pixmap",
+  gtk.Window.__init__(self)
