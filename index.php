@@ -71,9 +71,9 @@
         </select>
         <br>
         <br>
-        <input class="clearfix" type="text" name="fname" placeholder="First" value="Hans" />
-        <input class="clearfix" type="text" name="lname" placeholder="Last" value="" />
-        <input class="clearfix" type="text" name="party" placeholder="Party" value="" />
+        <input class="clearfix" type="text" name="fname" placeholder="First" />
+        <input class="clearfix" type="text" name="lname" placeholder="Last" />
+        <input class="clearfix" type="text" name="party" placeholder="Party" />
         <input class="clearfix" type="submit" value="submit" />
     </form>
     <div id="info">

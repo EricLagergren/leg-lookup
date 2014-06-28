@@ -12,10 +12,9 @@ body {
     text-align:center;
     background-color:#fff;
     line-height: 150%;
+    font-size: 125%;
 }
 form {
-    width:50%;
-    float: left;
     height: 100%;
 }
 #info {
@@ -34,7 +33,7 @@ a.button, button, input[type=submit] {
     padding:.6em .9em;
     transition:all .3s ease-in-out;
     margin:1em auto 0 auto;
-    width:80%;
+    width:55%;
 }
 a.button:hover, button:hover, input[type=submit]:hover {
     display:inline-block;
@@ -91,11 +90,14 @@ input[type="text"], textarea {
     transition:all .3s ease-in-out;
     color:#333;
     margin: 1em auto 0.25em auto;
-    width: 80%;
+    width: 55%;
 }
 input:focus, textarea:focus {
     border-color:#1ba698;
     outline:0
+}
+select {
+    margin-top: 1em;
 }
 .styled-select {
    width: 240px;
