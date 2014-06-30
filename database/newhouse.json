@@ -1,3 +1,15 @@
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2014 The New York Times Company.  All Rights Reserved.",
+   "results":[
+      {
+         "congress": "113",
+         "chamber": "House",
+         
+         
+         "num_results": "440",
+         "offset": "0",
+         "members": [
               {
                  "id": "A000055",
                  "thomas_id": "1460",
@@ -20,52 +32,6 @@
                  "district": "4"
                  ,"missed_votes_pct": "5.32",
                  "votes_with_party_pct": "93.53"
-               },
-                           {
-                 "id": "A000210",
-                 "thomas_id": "21",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/A000210.json",
-                 "first_name": "Robert",
-                 "middle_name": "E.",
-                 "last_name": "Andrews",
-                 "party": "D",
-                 "twitter_account": "RepAndrews",
-                 "facebook_account": "",
-                 "facebook_id": "",
-                 "url": "http://andrews.house.gov/",
-                 "rss_url": "http://andrews.house.gov/rss.xml",
-                 "domain": "andrews.house.gov",
-                 "dw_nominate": "-0.387",
-                 "ideal_point": "-0.962338518",
-                 "seniority": "26",
-                 "next_election": "2014",
-                 "state": "NJ",
-                 "district": "1"
-                 ,"missed_votes_pct": "1.45",
-                 "votes_with_party_pct": "90.32"
-               },
-                           {
-                 "id": "A000361",
-                 "thomas_id": "1727",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/A000361.json",
-                 "first_name": "Rodney",
-                 "middle_name": null,
-                 "last_name": "Alexander",
-                 "party": "R",
-                 "twitter_account": "USRepAlexander",
-                 "facebook_account": "RepRodneyAlexander",
-                 "facebook_id": "20002702544",
-                 "url": "",
-                 "rss_url": "http://alexander.house.gov/common/rss/?rss=24",
-                 "domain": "alexander.house.gov",
-                 "dw_nominate": "0.441",
-                 "ideal_point": "0.615240126",
-                 "seniority": "12",
-                 "next_election": "2014",
-                 "state": "LA",
-                 "district": "5"
-                 ,"missed_votes_pct": "2.45",
-                 "votes_with_party_pct": "92.47"
                },
                            {
                  "id": "A000367",
@@ -365,29 +331,6 @@
                  "district": "7"
                  ,"missed_votes_pct": "2.41",
                  "votes_with_party_pct": "96.30"
-               },
-                           {
-                 "id": "B001244",
-                 "thomas_id": "1703",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/B001244.json",
-                 "first_name": "Jo",
-                 "middle_name": null,
-                 "last_name": "Bonner",
-                 "party": "R",
-                 "twitter_account": "repjobonner",
-                 "facebook_account": "jobonner",
-                 "facebook_id": "49704847429",
-                 "url": "http://bonner.house.gov/",
-                 "rss_url": "http://bonner.house.gov/index.php?option=com_bca-rss-syndicator&amp;feed_id=1",
-                 "domain": "bonner.house.gov",
-                 "dw_nominate": "0.448",
-                 "ideal_point": "0.729763899",
-                 "seniority": "12",
-                 "next_election": "2014",
-                 "state": "AL",
-                 "district": "1"
-                 ,"missed_votes_pct": "7.38",
-                 "votes_with_party_pct": "92.03"
                },
                            {
                  "id": "B001245",
@@ -2619,29 +2562,6 @@
                  "district": "8"
                  ,"missed_votes_pct": "2.91",
                  "votes_with_party_pct": "88.62"
-               },
-                           {
-                 "id": "E000172",
-                 "thomas_id": "1481",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/E000172.json",
-                 "first_name": "Jo Ann",
-                 "middle_name": null,
-                 "last_name": "Emerson",
-                 "party": "R",
-                 "twitter_account": "",
-                 "facebook_account": "",
-                 "facebook_id": "",
-                 "url": "",
-                 "rss_url": "",
-                 "domain": "",
-                 "dw_nominate": "",
-                 "ideal_point": "0.673511064",
-                 "seniority": "20",
-                 "next_election": "2014",
-                 "state": "MO",
-                 "district": "8"
-                 ,"missed_votes_pct": "52.00",
-                 "votes_with_party_pct": "83.33"
                },
                            {
                  "id": "E000179",
@@ -5701,29 +5621,6 @@
                  "district": "12"
                  ,"missed_votes_pct": "4.02",
                  "votes_with_party_pct": "93.83"
-               },
-                           {
-                 "id": "M000133",
-                 "thomas_id": "735",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/M000133.json",
-                 "first_name": "Edward",
-                 "middle_name": "J.",
-                 "last_name": "Markey",
-                 "party": "D",
-                 "twitter_account": "markeymemo",
-                 "facebook_account": "EdJMarkey",
-                 "facebook_id": "6846731378",
-                 "url": "http://www.markey.senate.gov",
-                 "rss_url": "http://www.markey.senate.gov/rss/feeds/",
-                 "domain": "markey.senate.gov",
-                 "dw_nominate": "-0.562",
-                 "ideal_point": "-1.50679049",
-                 "seniority": "40",
-                 "next_election": "2014",
-                 "state": "MA",
-                 "district": "5"
-                 ,"missed_votes_pct": "57.51",
-                 "votes_with_party_pct": "86.00"
                },
                            {
                  "id": "M000309",
@@ -9659,29 +9556,6 @@
                  "votes_with_party_pct": "93.58"
                },
                            {
-                 "id": "W000207",
-                 "thomas_id": "1207",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/W000207.json",
-                 "first_name": "Melvin",
-                 "middle_name": null,
-                 "last_name": "Watt",
-                 "party": "D",
-                 "twitter_account": "MelWattNC12",
-                 "facebook_account": "CongressmanMelWatt",
-                 "facebook_id": "191136754250537",
-                 "url": "http://watt.house.gov/",
-                 "rss_url": "http://watt.house.gov/index.php?format=feed&amp;type=rss",
-                 "domain": "watt.house.gov",
-                 "dw_nominate": "-0.451",
-                 "ideal_point": "-1.218362703",
-                 "seniority": "22",
-                 "next_election": "2014",
-                 "state": "NC",
-                 "district": "12"
-                 ,"missed_votes_pct": "4.52",
-                 "votes_with_party_pct": "93.79"
-               },
-                           {
                  "id": "W000215",
                  "thomas_id": "1209",
                  "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/W000215.json",
@@ -10140,29 +10014,6 @@
                  "district": "25"
                  ,"missed_votes_pct": "3.41",
                  "votes_with_party_pct": "97.30"
-               },
-                           {
-                 "id": "Y000031",
-                 "thomas_id": "1255",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/Y000031.json",
-                 "first_name": "C. W. Bill",
-                 "middle_name": null,
-                 "last_name": "Young",
-                 "party": "R",
-                 "twitter_account": "",
-                 "facebook_account": "",
-                 "facebook_id": "",
-                 "url": "",
-                 "rss_url": "http://young.house.gov/rss.xml",
-                 "domain": "young.house.gov",
-                 "dw_nominate": "0.523",
-                 "ideal_point": "0.681358848",
-                 "seniority": "44",
-                 "next_election": "2014",
-                 "state": "FL",
-                 "district": "13"
-                 ,"missed_votes_pct": "32.18",
-                 "votes_with_party_pct": "91.15"
                },
                            {
                  "id": "Y000033",

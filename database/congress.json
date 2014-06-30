@@ -1,4 +1,15 @@
-             {"results":[
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2014 The New York Times Company.  All Rights Reserved.",
+   "results":[
+      {
+         "congress": "113",
+         "chamber": "Senate",
+         
+         
+         "num_results": "105",
+         "offset": "0",
+         "members": [
               {
                  "id": "A000360",
                  "thomas_id": "1695",
@@ -2309,6 +2320,21 @@
                  ,"missed_votes_pct": "0.53",
                  "votes_with_party_pct": "98.41"
                }
+             ]
+      }
+   ]
+},{
+   "status":"OK",
+   "copyright":"Copyright (c) 2014 The New York Times Company.  All Rights Reserved.",
+   "results":[
+      {
+         "congress": "113",
+         "chamber": "House",
+         
+         
+         "num_results": "447",
+         "offset": "0",
+         "members": [
               {
                  "id": "A000055",
                  "thomas_id": "1460",
@@ -12590,4 +12616,7 @@
                  ,"missed_votes_pct": "0.60",
                  "votes_with_party_pct": "91.11"
                }
-]}
+             ]
+      }
+   ]
+}

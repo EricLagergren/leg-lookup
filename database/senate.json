@@ -1,3 +1,15 @@
+{
+   "status":"OK",
+   "copyright":"Copyright (c) 2014 The New York Times Company.  All Rights Reserved.",
+   "results":[
+      {
+         "congress": "113",
+         "chamber": "Senate",
+         
+         
+         "num_results": "100",
+         "offset": "0",
+         "members": [
               {
                  "id": "A000360",
                  "thomas_id": "1695",
@@ -41,28 +53,6 @@
                  "state": "NH"
                  ,"missed_votes_pct": "1.97",
                  "votes_with_party_pct": "81.49"
-               },
-                           {
-                 "id": "B000243",
-                 "thomas_id": "66",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/B000243.json",
-                 "first_name": "Max",
-                 "middle_name": null,
-                 "last_name": "Baucus",
-                 "party": "D",
-                 "twitter_account": "",
-                 "facebook_account": "",
-                 "facebook_id": "",
-                 "url": "http://www.baucus.senate.gov",
-                 "rss_url": "http://www.baucus.senate.gov/rss/?p=news",
-                 "domain": "",
-                 "dw_nominate": "-0.191",
-                 "ideal_point": "-0.336580091",
-                 "seniority": "35",
-                 "next_election": "2014",
-                 "state": "MT"
-                 ,"missed_votes_pct": "0.63",
-                 "votes_with_party_pct": "90.13"
                },
                            {
                  "id": "B000575",
@@ -615,50 +605,6 @@
                  "votes_with_party_pct": "87.21"
                },
                            {
-                 "id": "C001099",
-                 "thomas_id": "2189",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/C001099.json",
-                 "first_name": "William",
-                 "middle_name": "",
-                 "last_name": "Cowan",
-                 "party": "D",
-                 "twitter_account": "SenMoCowan",
-                 "facebook_account": "SenatorWilliamMoCowan",
-                 "facebook_id": "529202873791889",
-                 "url": "http://www.cowan.senate.gov",
-                 "rss_url": "",
-                 "domain": "www.cowan.senate.gov",
-                 "dw_nominate": "-0.447",
-                 "ideal_point": "-0.987585557",
-                 "seniority": "1",
-                 
-                 "state": "MA"
-                 ,"missed_votes_pct": "3.75",
-                 "votes_with_party_pct": "96.10"
-               },
-                           {
-                 "id": "C001100",
-                 "thomas_id": "2192",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/C001100.json",
-                 "first_name": "Jeffrey",
-                 "middle_name": "S.",
-                 "last_name": "Chiesa",
-                 "party": "R",
-                 "twitter_account": "",
-                 "facebook_account": "",
-                 "facebook_id": "",
-                 "url": "",
-                 "rss_url": "",
-                 "domain": "",
-                 "dw_nominate": "0.359",
-                 "ideal_point": "0.811372575",
-                 "seniority": "1",
-                 
-                 "state": "NJ"
-                 ,"missed_votes_pct": "14.63",
-                 "votes_with_party_pct": "82.86"
-               },
-                           {
                  "id": "D000563",
                  "thomas_id": "326",
                  "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/D000563.json",
@@ -1165,28 +1111,6 @@
                  "votes_with_party_pct": "91.00"
                },
                            {
-                 "id": "K000148",
-                 "thomas_id": "1379",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/K000148.json",
-                 "first_name": "John",
-                 "middle_name": null,
-                 "last_name": "Kerry",
-                 "party": "D",
-                 "twitter_account": "",
-                 "facebook_account": "",
-                 "facebook_id": "",
-                 "url": "",
-                 "rss_url": "",
-                 "domain": "",
-                 "dw_nominate": "",
-                 "ideal_point": "-0.386192016",
-                 "seniority": "29",
-                 "next_election": "2014",
-                 "state": "MA"
-                 ,"missed_votes_pct": "54.55",
-                 "votes_with_party_pct": "80.00"
-               },
-                           {
                  "id": "K000360",
                  "thomas_id": "1647",
                  "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/K000360.json",
@@ -1273,28 +1197,6 @@
                  "state": "VA"
                  ,"missed_votes_pct": "1.78",
                  "votes_with_party_pct": "97.19"
-               },
-                           {
-                 "id": "L000123",
-                 "thomas_id": "1381",
-                 "api_uri":"http://api.nytimes.com/svc/politics/v3/us/legislative/congress/members/L000123.json",
-                 "first_name": "Frank",
-                 "middle_name": "R.",
-                 "last_name": "Lautenberg",
-                 "party": "D",
-                 "twitter_account": "franklautenberg",
-                 "facebook_account": "franklautenberg",
-                 "facebook_id": "121816241167991",
-                 "url": "http://www.lautenberg.senate.gov/",
-                 "rss_url": "",
-                 "domain": "lautenberg.senate.gov",
-                 "dw_nominate": "-0.485",
-                 "ideal_point": "-1.35594552",
-                 "seniority": "29",
-                 "next_election": "2014",
-                 "state": "NJ"
-                 ,"missed_votes_pct": "76.26",
-                 "votes_with_party_pct": "96.97"
                },
                            {
                  "id": "L000174",
@@ -2308,3 +2210,7 @@
                  ,"missed_votes_pct": "0.53",
                  "votes_with_party_pct": "98.41"
                }
+             ]
+      }
+   ]
+}

@@ -41,7 +41,6 @@ if ($lname === '' && $fname === '' && $inputparty === '' && $inputstate === '') 
 }
 
 $query = $url . implode('&', $params) . $apikey;
-$queryNyTimes = 
 
 $data = json_decode(file_get_contents($query), true);
 
