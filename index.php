@@ -8,12 +8,12 @@
     <meta name="robots" content="index, follow">
     <title>Find Legislators</title>
     <link href="/css/normalize.min.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/php.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <form name="form" method="POST" action="api.php">
+    <form name="form" method="POST" action="/source/php/api.php">
         <h1>Legislator Lookup</h1>
         <select name="state" class="clearfix styled-select">
         	<option value="">State</option>
@@ -76,21 +76,6 @@
         <input class="clearfix" type="text" name="party" placeholder="Party" />
         <input class="clearfix" type="submit" value="submit" />
     </form>
-    <div id="info">
-	    <div id="error"></div>
-	    <div id="info-nested">
-		    <h2 id="name"></h2>
-		    <div id="state"></div>
-		    <div id="district"></div>
-		    <div id="party"></div>
-		    <div id="email"></div>
-		    <div id="photo"></div>
-		    <div id="website"></div>
-		    <div id="chamber"></div>
-		    <div id="address"></div>
-		    <div id="phone"></div>
-		</div>
-	</div>
 
 </body>
 

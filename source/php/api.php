@@ -1,16 +1,12 @@
 <?php 
 
 $url = 'http://openstates.org/api/v1/legislators/?';
+$congressUrl = 'congress.json';
 $apikey = '&apikey=546db95e534f4b6b860f57ecb41f0f98';
 
 # User input variables
 
-if (isset($_GET['full_name'])) {
-   $full_name = trim($_GET['full_name']);
-}
-else{
-   $full_name = '';
-}
+$full_name = urlencode(@$_GET['full_name']);
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $inputparty = $_POST['party'];
@@ -20,6 +16,9 @@ $inputstate = $_POST['state'];
 
 $params = array();
 
+if ($full_name !== null) {
+    $params[] = 'full_name=' . strtolower($full_name);
+}
 if ($fname !== '') {
 	$params[] = 'first_name=' . strtolower($fname);
 }
@@ -41,12 +40,8 @@ if ($lname === '' && $fname === '' && $inputparty === '' && $inputstate === '') 
 	exit('No names entered' . ' <a href="javascript:void(0);" onclick="window.history.go(-1);">Go back</a>' );
 }
 
-
-if ($full_name === '') {
-	$query = $url . implode('&', $params) . $apikey;
-} else {
-	$query = $url . 'full_name=' . urlencode($full_name) . $apikey;
-}
+$query = $url . implode('&', $params) . $apikey;
+$queryNyTimes = 
 
 $data = json_decode(file_get_contents($query), true);
 
@@ -280,7 +275,14 @@ $longstate = $states[strtoupper($state)];
 
 <html>
 <head>
-	<title>Leg Info</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv='cleartype' content='on'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="robots" content="index, follow">
+    <title>Legislator Info</title>
+    <link href="/css/normalize.min.css" rel="stylesheet">
+    <link href="/css/results.css" rel="stylesheet">
 </head>
 <body>
 <div id="info">
