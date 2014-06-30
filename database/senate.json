@@ -1,12 +1,3 @@
-   "results":[
-      {
-         "congress": "113",
-         "chamber": "Senate",
-         
-         
-         "num_results": "105",
-         "offset": "0",
-         "members": [
               {
                  "id": "A000360",
                  "thomas_id": "1695",
@@ -2317,7 +2308,3 @@
                  ,"missed_votes_pct": "0.53",
                  "votes_with_party_pct": "98.41"
                }
-             ]
-      }
-   ]
-},

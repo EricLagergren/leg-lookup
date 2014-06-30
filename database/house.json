@@ -1,11 +1,3 @@
-      {
-         "congress": "113",
-         "chamber": "House",
-         
-         
-         "num_results": "447",
-         "offset": "0",
-         "members": [
               {
                  "id": "A000055",
                  "thomas_id": "1460",
@@ -10287,7 +10279,3 @@
                  ,"missed_votes_pct": "0.60",
                  "votes_with_party_pct": "91.11"
                }
-             ]
-      }
-   ]
-}
