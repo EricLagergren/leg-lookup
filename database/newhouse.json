@@ -1,14 +1,4 @@
-{
-   "status":"OK",
-   "copyright":"Copyright (c) 2014 The New York Times Company.  All Rights Reserved.",
-   "results":[
-      {
-         "congress": "113",
-         "chamber": "House",
-         
-         
-         "num_results": "447",
-         "offset": "0",
+
          "members": [
               {
                  "id": "A000055",
@@ -10292,6 +10282,3 @@
                  "votes_with_party_pct": "91.11"
                }
              ]
-      }
-   ]
-}
