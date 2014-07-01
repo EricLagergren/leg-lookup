@@ -7,10 +7,10 @@ $apikey = '&apikey=546db95e534f4b6b860f57ecb41f0f98';
 # User input variables
 
 $full_name = urlencode(@$_GET['full_name']);
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$inputparty = $_POST['party'];
-$inputstate = $_POST['state'];
+$fname = @$_POST['fname'];
+$lname = @$_POST['lname'];
+$inputparty = @$_POST['party'];
+$inputstate = @$_POST['state'];
 
 # Params to create query url
 
@@ -20,10 +20,10 @@ if ($full_name !== null) {
     $params[] = 'full_name=' . strtolower($full_name);
 }
 if ($fname !== '') {
-	$params[] = 'first_name=' . strtolower($fname);
+	$params[] = 'first_name=' . ucfirst($fname);
 }
 if ($lname !== '') {
-	$params[] = 'last_name=' . strtolower($lname);
+	$params[] = 'last_name=' . ucfirst($lname);
 }
 if ($inputparty !== '') {
 	if (strtolower($inputparty) === 'gop') {
@@ -45,11 +45,13 @@ $query = $url . implode('&', $params) . $apikey;
 $data = json_decode(file_get_contents($query), true);
 
 if (empty($data)) {
-	echo '<script>window.history.go(-1);</script>';
+    $query = 'https://congress.api.sunlightfoundation.com/legislators/?' . implode('&', $params) . $apikey;
+	$data = json_decode(file_get_contents($query), true);
+    $other = true;
 }
 
-$numpeople = substr_count(json_encode($data), 'full_name');
 
+$numpeople = substr_count(json_encode($data), 'full_name');
 
 if ($numpeople > 1) {
 	$list = array();
@@ -58,19 +60,35 @@ if ($numpeople > 1) {
 	}
 	$list = 'Multiple matches found' . '<br><br>' . 'Did you mean ' . implode(', ', $list) . '?';
 	print $list;
-} else {
+} elseif (@$other != true) {
 	$name = $data[0]['full_name'];
 	$state = $data[0]['state'];
-	$district = $data[0]['district'];
+	$district = $data[0]['district'] . ordinal_suffix($data[0]['district']) . ' district';
 	$party = $data[0]['party'];
-	$email = $data[0]['email'];
+	$contact = '<a href="mailto:' . $data[0]['email'] . '">Email ' . $name . '</a>';
 	$photo = $data[0]['photo_url'];
 	$website = $data[0]['url'];
 	$level = $data[0]['level'];
-	$chamber = $data[0]['chamber'];
+	$chamber = getChamber($data[0]['chamber'], $state);
+    $title = getPrefix($data[0]['chamber'], $state);
 	$address = nl2br($data[0]['offices'][0]['address']);
 	$state = $data[0]['state'];
+} else {
+    $name = $data['results'][0]['first_name'] . ' ' . $data['results'][0]['last_name'];
+    $title = $data['results'][0]['title'];
+    $role = $data['results'][0]['leadership_role'];
+    $state = $data['results'][0]['state'];
+    $party = $data['results'][0]['party'];
+    $photo = 'http://theunitedstates.io/images/congress/original/' . $data['results'][0]['bioguide_id'] . '.jpg';
+    $contact = '<a href="' . $data['results'][0]['contact_form'] . '">Contact ' . $name . '</a>';
+    $website = $data['results'][0]['website'];
+    $level = $data['results'][0]['level'];
+    $chamber = ucfirst($data['results'][0]['chamber']);
+    $address = nl2br($data['results'][0]['offices'][0]['address']);
+    $state = $data['results'][0]['state'];
+    $phone = $data['results'][0]['phone'];
 }
+
 
 $states = array(
     'AL'=>'Alabama',
@@ -234,25 +252,37 @@ $demparties = array(
     'WY' => 'http://www.wyomingdemocrats.com/'
 );
 
-    if ($iparty === "Democratic") return $demparties[strtoupper($input)];
-    if ($iparty === "Republican") return $gopparties[strtoupper($input)];
+    if ($iparty === "Democratic" || $iparty === "D" || $iparty === "Democrat") return $demparties[strtoupper($input)];
+    if ($iparty === "Republican" || $iparty === "R") return $gopparties[strtoupper($input)];
 
 }
 
-function getChamber($upperlower) {
-    if ($upperlower === "upper") return "Upper Chamber/Senate";
-    else if ($upperlower === "lower") {
-        if ($state === "ca" || $state === "ny" || $state === "wi" || $state === "nj" || $state === "nv") {
-            if ($state === "nv") {
+function getChamber($upperlower, $istate) {
+    if ($upperlower === "upper") return "Senate";
+    elseif ($upperlower === "lower") {
+        if ($istate === "ca" || $istate === "ny" || $istate === "wi" || $istate === "nj" || $istate === "nv") {
+            if ($istate === "nv") {
                 return "Nevada Assembly";
             }
             return "State Assembly";
         }
-        if ($state === "md" || $state === "va" || $state === "wv") {
+        if ($istate === "md" || $istate === "va" || $istate === "wv") {
             return "House of Delegates";
         } else return "House of Representatives";
     }
 
+}
+
+function getPrefix($pchamber, $vstate) {
+    if ($pchamber === "upper") return "Sen";
+    elseif ($pchamber === "lower") {
+        if ($vstate === "ca" || $vstate === "ny" || $vstate === "wi" || $vstate === "nj" || $vstate === "nv") {
+            return "Asm";
+        }
+        if ($vstate === "md" || $vstate === "va" || $vstate === "wv") {
+            return "Del";
+        } else return "Rep";
+    }
 }
 
 function ordinal_suffix($num){
@@ -267,6 +297,13 @@ function ordinal_suffix($num){
 }
 
 $longstate = $states[strtoupper($state)];
+
+if (strtolower($party) === "r" || strtolower($party) === "gop" ) {
+    $party = "Republican";
+}
+if (strtolower($party) === "d" || strtolower($party) === "democrat" ) {
+    $party = "Democratic";
+}
 
 
 ?>
@@ -286,17 +323,17 @@ $longstate = $states[strtoupper($state)];
 <body>
 <div id="info">
     <div id="error"></div>
-    <div id="info-nested">
-	    <h2 id="name"><?php echo $name ?></h2>
+    <div id="info-nested" style="text-align:center;margin-top:2em;">
+	    <h2 id="name"><?php echo ucfirst($title) . '. ' . $name ?></h2>
+        <div id="chamber"><?php echo $chamber . ' ' . $role ?></div>
 	    <div id="state"><?php echo $longstate . ' (' . strtoupper($state) . ')' ?></div>
-	    <div id="district"><?php echo $district . ordinal_suffix($district) . ' district' ?></div>
+	    <div id="district"><?php echo $district ?></div>
 	    <div id="party"><?php echo '<a href="' . getPartySite($state, $party) . '" target="_blank">' . $party . '</a>' ?></div>
-	    <div id="email"><?php echo '<a href="mailto:' . $email . '">' . $email . '</a>' ?></div>
 	    <div id="photo"><?php echo '<img style="width:200px;height:auto;" src="' . $photo . '">'?></div>
 	    <div id="website"><?php echo '<a href="' . $website . '" target="_blank">Website</a>' ?></div>
-	    <div id="chamber"><?php getChamber($chamber) ?></div>
+        <div id="contact"><?php echo $contact ?></div>
 	    <div id="address"><?php echo $address ?></div>
-	    <div id="phone"><?php echo $phone ?></div>
+	    <div id="phone"><?php echo @$phone ?></div>
 	</div>
 </div>
 </body>
